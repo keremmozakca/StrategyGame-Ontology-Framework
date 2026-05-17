@@ -1,0 +1,291 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2">
+    <Prefix name="" IRI="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#Action"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Attack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BuildTroop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Defend"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Entity"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ExpansionPhase"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Food"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GameState"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GatherResource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Gold"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NPC"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Player"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Resource"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ResourceCritical"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Retreat"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Safe"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Troop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#UnderAttack"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasResource"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasState"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#hasTarget"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#isAlliedWith"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#recommendedAction"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#healthPoints"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#resourceAmount"/>
+    </Declaration>
+    <Declaration>
+        <DataProperty IRI="#threatLevel"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_Defend_Castle"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#State_Under_Siege"/>
+    </Declaration>
+    <SubClassOf>
+        <Class IRI="#Attack"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BuildTroop"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Defend"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ExpansionPhase"/>
+        <Class IRI="#GameState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Food"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GatherResource"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Gold"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NPC"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Player"/>
+        <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ResourceCritical"/>
+        <Class IRI="#GameState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Retreat"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Safe"/>
+        <Class IRI="#GameState"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Troop"/>
+        <Class IRI="#Resource"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#UnderAttack"/>
+        <Class IRI="#GameState"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#Defend"/>
+        <NamedIndividual IRI="#Action_Defend_Castle"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Gold"/>
+        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NPC"/>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#NPC"/>
+        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#UnderAttack"/>
+        <NamedIndividual IRI="#State_Under_Siege"/>
+    </ClassAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasTarget"/>
+        <NamedIndividual IRI="#Action_Defend_Castle"/>
+        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasResource"/>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#hasState"/>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <NamedIndividual IRI="#State_Under_Siege"/>
+    </ObjectPropertyAssertion>
+    <ObjectPropertyAssertion>
+        <ObjectProperty IRI="#recommendedAction"/>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <NamedIndividual IRI="#Action_Defend_Castle"/>
+    </ObjectPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#resourceAmount"/>
+        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#healthPoints"/>
+        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+    </DataPropertyAssertion>
+    <DataPropertyAssertion>
+        <DataProperty IRI="#threatLevel"/>
+        <NamedIndividual IRI="#State_Under_Siege"/>
+        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9</Literal>
+    </DataPropertyAssertion>
+    <SymmetricObjectProperty>
+        <ObjectProperty IRI="#isAlliedWith"/>
+    </SymmetricObjectProperty>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasResource"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#hasTarget"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isAlliedWith"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#recommendedAction"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasResource"/>
+        <Class IRI="#Resource"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasState"/>
+        <Class IRI="#GameState"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#hasTarget"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#isAlliedWith"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#recommendedAction"/>
+        <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <DataPropertyDomain>
+        <DataProperty IRI="#healthPoints"/>
+        <Class IRI="#Entity"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#resourceAmount"/>
+        <Class IRI="#Resource"/>
+    </DataPropertyDomain>
+    <DataPropertyDomain>
+        <DataProperty IRI="#threatLevel"/>
+        <Class IRI="#GameState"/>
+    </DataPropertyDomain>
+    <DataPropertyRange>
+        <DataProperty IRI="#healthPoints"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#resourceAmount"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+    <DataPropertyRange>
+        <DataProperty IRI="#threatLevel"/>
+        <Datatype abbreviatedIRI="xsd:integer"/>
+    </DataPropertyRange>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.29.2024-05-13T12:11:03Z) https://github.com/owlcs/owlapi -->
+
