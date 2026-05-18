@@ -1,0 +1,194 @@
+@prefix : <http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#> .
+
+<http://www.semanticweb.org/cse3226/strategy-game-ontology/v2> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource
+:hasResource rdf:type owl:ObjectProperty ;
+             rdfs:domain :Entity ;
+             rdfs:range :Resource .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState
+:hasState rdf:type owl:ObjectProperty ;
+          rdfs:domain :Entity ;
+          rdfs:range :GameState .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget
+:hasTarget rdf:type owl:ObjectProperty ;
+           rdfs:domain :Action ;
+           rdfs:range :Entity .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith
+:isAlliedWith rdf:type owl:ObjectProperty ,
+                       owl:SymmetricProperty ;
+              rdfs:domain :Entity ;
+              rdfs:range :Entity .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction
+:recommendedAction rdf:type owl:ObjectProperty ;
+                   rdfs:domain :Entity ;
+                   rdfs:range :Action .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints
+:healthPoints rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Entity ;
+              rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount
+:resourceAmount rdf:type owl:DatatypeProperty ;
+                rdfs:domain :Resource ;
+                rdfs:range xsd:integer .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel
+:threatLevel rdf:type owl:DatatypeProperty ;
+             rdfs:domain :GameState ;
+             rdfs:range xsd:integer .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action
+:Action rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack
+:Attack rdf:type owl:Class ;
+        rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop
+:BuildTroop rdf:type owl:Class ;
+            rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend
+:Defend rdf:type owl:Class ;
+        rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity
+:Entity rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase
+:ExpansionPhase rdf:type owl:Class ;
+                rdfs:subClassOf :GameState .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food
+:Food rdf:type owl:Class ;
+      rdfs:subClassOf :Resource .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState
+:GameState rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource
+:GatherResource rdf:type owl:Class ;
+                rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold
+:Gold rdf:type owl:Class ;
+      rdfs:subClassOf :Resource .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#NPC
+:NPC rdf:type owl:Class ;
+     rdfs:subClassOf :Entity .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Player
+:Player rdf:type owl:Class ;
+        rdfs:subClassOf :Entity .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource
+:Resource rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ResourceCritical
+:ResourceCritical rdf:type owl:Class ;
+                  rdfs:subClassOf :GameState .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat
+:Retreat rdf:type owl:Class ;
+         rdfs:subClassOf :Action .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe
+:Safe rdf:type owl:Class ;
+      rdfs:subClassOf :GameState .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop
+:Troop rdf:type owl:Class ;
+       rdfs:subClassOf :Resource .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack
+:UnderAttack rdf:type owl:Class ;
+             rdfs:subClassOf :GameState .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle
+:Action_Defend_Castle rdf:type owl:NamedIndividual ,
+                               :Defend ;
+                      :hasTarget :Kingdom_OrcHorde .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Avalon_Gold_Reserve
+:Avalon_Gold_Reserve rdf:type owl:NamedIndividual ,
+                              :Gold ;
+                     :resourceAmount 12 .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Kingdom_Avalon
+:Kingdom_Avalon rdf:type owl:NamedIndividual ,
+                         :NPC ;
+                :hasResource :Avalon_Gold_Reserve ;
+                :hasState :State_Under_Siege ;
+                :recommendedAction :Action_Defend_Castle ;
+                :healthPoints 40 .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Kingdom_OrcHorde
+:Kingdom_OrcHorde rdf:type owl:NamedIndividual ,
+                           :NPC .
+
+
+###  http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#State_Under_Siege
+:State_Under_Siege rdf:type owl:NamedIndividual ,
+                            :UnderAttack ;
+                   :threatLevel 9 .
+
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

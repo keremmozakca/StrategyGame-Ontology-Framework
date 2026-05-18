@@ -1,0 +1,508 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "baseIris" : [ "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "0",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "27",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Safe"
+    },
+    "id" : "0",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnderAttack"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#State_Under_Siege",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "State_Under_Siege"
+      }
+    } ],
+    "id" : "2",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Action"
+    },
+    "subClasses" : [ "9", "10", "11", "12", "13" ],
+    "id" : "8"
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "14",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "16", "17" ],
+    "id" : "7"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Defend"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_Defend_Castle"
+      }
+    } ],
+    "id" : "12",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#NPC",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NPC"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Kingdom_Avalon",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Kingdom_Avalon"
+      }
+    }, {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Kingdom_OrcHorde",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Kingdom_OrcHorde"
+      }
+    } ],
+    "id" : "17",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "25",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "5",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpansionPhase"
+    },
+    "id" : "26",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "subClasses" : [ "27", "28", "29" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attack"
+    },
+    "id" : "11",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gold"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Avalon_Gold_Reserve",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Avalon_Gold_Reserve"
+      }
+    } ],
+    "id" : "27",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Player",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Player"
+    },
+    "id" : "16",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Food"
+    },
+    "id" : "28",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Troop"
+    },
+    "id" : "29",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Retreat"
+    },
+    "id" : "9",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildTroop"
+    },
+    "id" : "10",
+    "superClasses" : [ "8" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ResourceCritical",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceCritical"
+    },
+    "id" : "35",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GameState"
+    },
+    "subClasses" : [ "0", "2", "35", "26" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GatherResource"
+    },
+    "id" : "13",
+    "superClasses" : [ "8" ]
+  } ],
+  "property" : [ {
+    "id" : "3",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "15",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "18",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "20",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "22",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "30",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "31",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "32",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "33",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:SubClassOf"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "5",
+    "label" : {
+      "IRI-based" : "resourceAmount"
+    },
+    "domain" : "4",
+    "attributes" : [ "datatype" ],
+    "id" : "3"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "hasResource"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "6"
+  }, {
+    "range" : "8",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "15"
+  }, {
+    "range" : "8",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "18"
+  }, {
+    "range" : "8",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "19"
+  }, {
+    "range" : "8",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "20"
+  }, {
+    "range" : "8",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "range" : "7",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "22"
+  }, {
+    "range" : "7",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "hasTarget"
+    },
+    "domain" : "8",
+    "attributes" : [ "object" ],
+    "id" : "24"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "recommendedAction"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "30"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "25",
+    "label" : {
+      "IRI-based" : "healthPoints"
+    },
+    "domain" : "7",
+    "attributes" : [ "datatype" ],
+    "id" : "31"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isAlliedWith"
+    },
+    "domain" : "7",
+    "attributes" : [ "symmetric", "object" ],
+    "id" : "32"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "14",
+    "label" : {
+      "IRI-based" : "threatLevel"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "33"
+  }, {
+    "range" : "1",
+    "domain" : "2",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "34"
+  }, {
+    "range" : "1",
+    "domain" : "0",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "36"
+  }, {
+    "range" : "1",
+    "domain" : "26",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "37"
+  }, {
+    "range" : "1",
+    "domain" : "35",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "4",
+    "domain" : "27",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "39"
+  }, {
+    "range" : "4",
+    "domain" : "29",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasState"
+    },
+    "domain" : "7",
+    "attributes" : [ "object" ],
+    "id" : "41"
+  }, {
+    "range" : "4",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "42"
+  } ]
+}
