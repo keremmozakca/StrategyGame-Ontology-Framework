@@ -1,4 +1,4 @@
-# Ontology-Driven Tactical Recommendation System for Strategy Games
+# Ontology-Driven Tactical Recommendation System for Strategy Games .
 
 This project, developed for the **CSE 3226 Knowledge Engineering and Ontology** course, presents a dynamic semantic reasoning framework designed to govern NPC behaviors and strategic decision-making in real-time strategy games. 
 
