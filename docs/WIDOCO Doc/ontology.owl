@@ -1,0 +1,2631 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#"
+     xml:base="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+     xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+     xmlns:swrlb="http://www.w3.org/2003/11/swrlb#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled -->
+
+
+    <owl:AnnotationProperty rdf:about="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isVassalOf -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isVassalOf">
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AsymmetricProperty"/>
+        <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#IrreflexiveProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.w3.org/2002/07/owl#differentFrom -->
+
+
+    <owl:ObjectProperty rdf:about="http://www.w3.org/2002/07/owl#differentFrom"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel -->
+
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAid -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAlliance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAlliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptVassalage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptVassalage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BreakAlliance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BreakAlliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Collapsed -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Collapsed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">4</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">7</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#NPC -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#NPC">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferAlliance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferAlliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferVassalage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferVassalage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Player -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Player">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAid -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAlliance -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAlliance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectVassalage -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectVassalage">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RequestAid -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RequestAid">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ResourceCritical -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ResourceCritical">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:maxInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">3</xsd:maxInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel"/>
+                        <owl:someValuesFrom>
+                            <rdfs:Datatype>
+                                <owl:onDatatype rdf:resource="http://www.w3.org/2001/XMLSchema#integer"/>
+                                <owl:withRestrictions rdf:parseType="Collection">
+                                    <rdf:Description>
+                                        <xsd:minInclusive rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">8</xsd:minInclusive>
+                                    </rdf:Description>
+                                </owl:withRestrictions>
+                            </rdfs:Datatype>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Vassal -->
+
+
+    <owl:Class rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Vassal">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAid -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAlliance -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAlliance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAlliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptVassalage -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptVassalage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptVassalage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Attack -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Attack">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BreakAlliance -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BreakAlliance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BreakAlliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BuildTroop -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BuildTroop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_GatherResource -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_GatherResource">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferAlliance -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferAlliance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferAlliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferVassalage -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferVassalage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferVassalage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAid -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAlliance -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAlliance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAlliance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectVassalage -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectVassalage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectVassalage"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RequestAid -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RequestAid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RequestAid"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Retreat -->
+
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Retreat">
+        <rdf:type rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Rules
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/t">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description rdf:about="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/hp">
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Karsi Saldiri Firsati</rdfs:comment>
+        <rdfs:label>S2</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Attack"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Muttefikten Acil Yardim Isteme</rdfs:comment>
+        <rdfs:label>S7</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RequestAid"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Zayif Dusen Muttefike Firsatci Ihanet</rdfs:comment>
+        <rdfs:label>S11</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/t"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/t"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">60</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                        <rdf:first>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BreakAlliance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Vassalin Kaynaklarini Somurme</rdfs:comment>
+        <rdfs:label>S14</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isVassalOf"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                                <rdf:first>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                        <swrl:arguments>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                                                                <rdf:rest>
+                                                                                                    <rdf:Description>
+                                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                                    </rdf:Description>
+                                                                                                </rdf:rest>
+                                                                                            </rdf:Description>
+                                                                                        </swrl:arguments>
+                                                                                    </rdf:Description>
+                                                                                </rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BuildTroop"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Guclulerin Baris Pakti</rdfs:comment>
+        <rdfs:label>S12</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DifferentIndividualsAtom"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferAlliance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Cokus Oncesi Boyun Egme</rdfs:comment>
+        <rdfs:label>S10</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s1"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/hp"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/hp"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s2"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferVassalage"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Ittifak Teklifini Reddetme</rdfs:comment>
+        <rdfs:label>S17</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAlliance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Ittifak Teklifini Kabul Etme</rdfs:comment>
+        <rdfs:label>S16</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/t"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/t"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAlliance"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Gelen Himaye Teklifini Kabul Etme</rdfs:comment>
+        <rdfs:label>S13</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptVassalage"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Fakirlik ve Toparlanma</rdfs:comment>
+        <rdfs:label>S5</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                        <swrl:arguments>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">15</rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </swrl:arguments>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_GatherResource"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Himaye Teklifini Reddetme</rdfs:comment>
+        <rdfs:label>S15</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/hp"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/hp"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">50</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectVassalage"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Kendi Caninin Derdine Dusup Yardimi Reddetme</rdfs:comment>
+        <rdfs:label>S9</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                <swrl:arguments>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                                        <rdf:rest>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                            </rdf:Description>
+                                                                        </rdf:rest>
+                                                                    </rdf:Description>
+                                                                </swrl:arguments>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAid"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Bolluk Icinde Yardimi Kabul Etme</rdfs:comment>
+        <rdfs:label>S8</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e2"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                                <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                        <rdf:first>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                                <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                                <swrl:arguments>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/g"/>
+                                                                                        <rdf:rest>
+                                                                                            <rdf:Description>
+                                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                                <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</rdf:first>
+                                                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                            </rdf:Description>
+                                                                                        </rdf:rest>
+                                                                                    </rdf:Description>
+                                                                                </swrl:arguments>
+                                                                            </rdf:Description>
+                                                                        </rdf:first>
+                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                    </rdf:Description>
+                                                                </rdf:rest>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e1"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAid"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Genisleme Donemi Stratejisi</rdfs:comment>
+        <rdfs:label>S6</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Attack"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Baris Zamani Yatirimi</rdfs:comment>
+        <rdfs:label>S4</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">40</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BuildTroop"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Savunma Icgudusu</rdfs:comment>
+        <rdfs:label>S1</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+    <rdf:Description>
+        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <rdfs:comment>Ekonomik Kriz ve Geri Cekilme</rdfs:comment>
+        <rdfs:label>S3</rdfs:label>
+        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
+        <swrl:body>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                        <rdf:first>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState"/>
+                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                            </rdf:Description>
+                        </rdf:first>
+                        <rdf:rest>
+                            <rdf:Description>
+                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                <rdf:first>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack"/>
+                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/s"/>
+                                    </rdf:Description>
+                                </rdf:first>
+                                <rdf:rest>
+                                    <rdf:Description>
+                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                        <rdf:first>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource"/>
+                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                            </rdf:Description>
+                                        </rdf:first>
+                                        <rdf:rest>
+                                            <rdf:Description>
+                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                <rdf:first>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#ClassAtom"/>
+                                                        <swrl:classPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food"/>
+                                                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                    </rdf:Description>
+                                                </rdf:first>
+                                                <rdf:rest>
+                                                    <rdf:Description>
+                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                        <rdf:first>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom"/>
+                                                                <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount"/>
+                                                                <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/r"/>
+                                                                <swrl:argument2 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                            </rdf:Description>
+                                                        </rdf:first>
+                                                        <rdf:rest>
+                                                            <rdf:Description>
+                                                                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                                                                <rdf:first>
+                                                                    <rdf:Description>
+                                                                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#BuiltinAtom"/>
+                                                                        <swrl:builtin rdf:resource="http://www.w3.org/2003/11/swrlb#lessThanOrEqual"/>
+                                                                        <swrl:arguments>
+                                                                            <rdf:Description>
+                                                                                <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                <rdf:first rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/amount"/>
+                                                                                <rdf:rest>
+                                                                                    <rdf:Description>
+                                                                                        <rdf:type rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#List"/>
+                                                                                        <rdf:first rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">20</rdf:first>
+                                                                                        <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                                                    </rdf:Description>
+                                                                                </rdf:rest>
+                                                                            </rdf:Description>
+                                                                        </swrl:arguments>
+                                                                    </rdf:Description>
+                                                                </rdf:first>
+                                                                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+                                                            </rdf:Description>
+                                                        </rdf:rest>
+                                                    </rdf:Description>
+                                                </rdf:rest>
+                                            </rdf:Description>
+                                        </rdf:rest>
+                                    </rdf:Description>
+                                </rdf:rest>
+                            </rdf:Description>
+                        </rdf:rest>
+                    </rdf:Description>
+                </rdf:rest>
+            </rdf:Description>
+        </swrl:body>
+        <swrl:head>
+            <rdf:Description>
+                <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#AtomList"/>
+                <rdf:first>
+                    <rdf:Description>
+                        <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#IndividualPropertyAtom"/>
+                        <swrl:propertyPredicate rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction"/>
+                        <swrl:argument1 rdf:resource="http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/e"/>
+                        <swrl:argument2 rdf:resource="http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Retreat"/>
+                    </rdf:Description>
+                </rdf:first>
+                <rdf:rest rdf:resource="http://www.w3.org/1999/02/22-rdf-syntax-ns#nil"/>
+            </rdf:Description>
+        </swrl:head>
+    </rdf:Description>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/ -->
+
+

@@ -1,0 +1,237 @@
+@prefix game: <http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#> .
+@prefix ns1: <http://www.semanticweb.org/cse3226/strategy-game-ontology/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+game:Kingdom_Avalon a game:Entity,
+        game:NPC ;
+    game:hasResource game:Food_Kingdom_Avalon,
+        game:Gold_Kingdom_Avalon,
+        game:Troop_Kingdom_Avalon ;
+    game:hasState game:State_Kingdom_Avalon ;
+    game:healthPoints 100 ;
+    game:recommendedAction game:Action_Attack .
+
+game:Kingdom_ElvenForest a game:Entity,
+        game:NPC ;
+    game:hasResource game:Food_Kingdom_ElvenForest,
+        game:Gold_Kingdom_ElvenForest,
+        game:Troop_Kingdom_ElvenForest ;
+    game:hasState game:State_Kingdom_ElvenForest ;
+    game:healthPoints 84 ;
+    game:recommendedAction game:Action_Attack .
+
+game:Kingdom_OrcHorde a game:Entity,
+        game:NPC ;
+    game:hasResource game:Food_Kingdom_OrcHorde,
+        game:Gold_Kingdom_OrcHorde,
+        game:Troop_Kingdom_OrcHorde ;
+    game:hasState game:State_Kingdom_OrcHorde ;
+    game:healthPoints 70 ;
+    game:recommendedAction game:Action_Attack .
+
+game:Player_Kingdom a game:Entity,
+        game:Player ;
+    game:hasResource game:Food_Player_Kingdom,
+        game:Gold_Player_Kingdom,
+        game:Troop_Player_Kingdom ;
+    game:hasState game:State_Player_Kingdom ;
+    game:healthPoints 32 ;
+    game:recommendedAction game:Action_Defend_Castle .
+
+game:Food_Kingdom_Avalon a game:Food ;
+    game:resourceAmount 23 .
+
+game:Food_Kingdom_ElvenForest a game:Food ;
+    game:resourceAmount 25 .
+
+game:Food_Kingdom_OrcHorde a game:Food ;
+    game:resourceAmount 32 .
+
+game:Food_Player_Kingdom a game:Food ;
+    game:resourceAmount 26 .
+
+game:Gold_Kingdom_Avalon a game:Gold ;
+    game:resourceAmount 105 .
+
+game:Gold_Kingdom_ElvenForest a game:Gold ;
+    game:resourceAmount 78 .
+
+game:Gold_Kingdom_OrcHorde a game:Gold ;
+    game:resourceAmount 69 .
+
+game:Gold_Player_Kingdom a game:Gold ;
+    game:resourceAmount 27 .
+
+game:State_Kingdom_Avalon a game:ExpansionPhase ;
+    game:threatLevel 7 .
+
+game:State_Kingdom_ElvenForest a game:ExpansionPhase ;
+    game:threatLevel 5 .
+
+game:State_Kingdom_OrcHorde a game:ExpansionPhase ;
+    game:threatLevel 4 .
+
+game:State_Player_Kingdom a game:UnderAttack ;
+    game:threatLevel 9 .
+
+game:Troop_Kingdom_Avalon a game:Troop ;
+    game:resourceAmount 8 .
+
+game:Troop_Kingdom_ElvenForest a game:Troop ;
+    game:resourceAmount 8 .
+
+game:Troop_Kingdom_OrcHorde a game:Troop ;
+    game:resourceAmount 0 .
+
+game:Troop_Player_Kingdom a game:Troop ;
+    game:resourceAmount 4 .
+
+[] a owl:Ontology ;
+    ns1:ontologyIRI "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2" ;
+    owl:Declaration [ a owl:Class ;
+            ns1:IRI "#RequestAid" ],
+        [ a owl:Class ;
+            ns1:IRI "#AcceptAid" ],
+        [ a owl:Class ;
+            ns1:IRI "#AcceptAlliance" ],
+        [ a owl:Class ;
+            ns1:IRI "#Collapsed" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_RejectAlliance" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_BreakAlliance" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#requestsAidFrom" ],
+        [ a owl:AnnotationProperty ;
+            ns1:IRI "http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled" ],
+        [ a owl:Class ;
+            ns1:IRI "#BuildTroop" ],
+        [ a owl:Class ;
+            ns1:IRI "#Entity" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#hasState" ],
+        [ a owl:Class ;
+            ns1:IRI "#OfferVassalage" ],
+        [ a owl:Class ;
+            ns1:IRI "#Resource" ],
+        [ a owl:DataProperty ;
+            ns1:IRI "#resourceAmount" ],
+        [ a owl:Class ;
+            ns1:IRI "#Safe" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#offersAllianceTo" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_Retreat" ],
+        [ a owl:Class ;
+            ns1:IRI "#RejectVassalage" ],
+        [ a owl:DataProperty ;
+            ns1:IRI "#healthPoints" ],
+        [ a owl:Class ;
+            ns1:IRI "#RejectAlliance" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_RejectVassalage" ],
+        [ a owl:Class ;
+            ns1:IRI "#OfferAlliance" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_OfferAlliance" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#recommendedAction" ],
+        [ a owl:Class ;
+            ns1:IRI "#AcceptVassalage" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_AcceptAlliance" ],
+        [ a owl:Class ;
+            ns1:IRI "#GameState" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#hasResource" ],
+        [ a owl:Class ;
+            ns1:IRI "#Gold" ],
+        [ a owl:Class ;
+            ns1:IRI "#ResourceCritical" ],
+        [ a owl:Class ;
+            ns1:IRI "#RejectAid" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_RejectAid" ],
+        [ a owl:Class ;
+            ns1:IRI "#Defend" ],
+        [ a owl:Class ;
+            ns1:IRI "#Attack" ],
+        [ a owl:Class ;
+            ns1:IRI "#BreakAlliance" ],
+        [ a owl:Class ;
+            ns1:IRI "#Food" ],
+        [ a owl:Class ;
+            ns1:IRI "#ExpansionPhase" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#hasTarget" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#isVassalOf" ],
+        [ a owl:Class ;
+            ns1:IRI "#GatherResource" ],
+        [ a owl:Class ;
+            ns1:IRI "#UnderAttack" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_GatherResource" ],
+        [ a owl:DataProperty ;
+            ns1:IRI "#threatLevel" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#offersVassalageTo" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_OfferVassalage" ],
+        [ a owl:Class ;
+            ns1:IRI "#Vassal" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_RequestAid" ],
+        [ a owl:Class ;
+            ns1:IRI "#Troop" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_AcceptAid" ],
+        [ a owl:Class ;
+            ns1:IRI "#Retreat" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_Defend_Castle" ],
+        [ a owl:Class ;
+            ns1:IRI "#Action" ],
+        [ a owl:ObjectProperty ;
+            ns1:IRI "#isAlliedWith" ],
+        [ a owl:Class ;
+            ns1:IRI "#Player" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_Attack" ],
+        [ a owl:Class ;
+            ns1:IRI "#NPC" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_AcceptVassalage" ],
+        [ a owl:NamedIndividual ;
+            ns1:IRI "#Action_BuildTroop" ] ;
+    owl:Prefix [ ns1:IRI "http://www.w3.org/1999/02/22-rdf-syntax-ns#" ;
+            ns1:name "rdf" ],
+        [ ns1:IRI "http://www.w3.org/XML/1998/namespace" ;
+            ns1:name "xml" ],
+        [ ns1:IRI "http://www.w3.org/2002/07/owl#" ;
+            ns1:name "owl" ],
+        [ ns1:IRI "http://www.semanticweb.org/keremozakca/ontologies/2026/4/untitled-ontology-19/" ;
+            ns1:name "" ],
+        [ ns1:IRI "http://www.w3.org/2000/01/rdf-schema#" ;
+            ns1:name "rdfs" ],
+        [ ns1:IRI "http://www.w3.org/2001/XMLSchema#" ;
+            ns1:name "xsd" ] .
+
+[] a owl:DataProperty ;
+    ns1:IRI "#threatLevel" .
+
+[] ns1:facet "http://www.w3.org/2001/XMLSchema#minInclusive" .
+
+[] a owl:DatatypeRestriction ;
+    owl:Datatype [ ns1:abbreviatedIRI "xsd:integer" ] .
+
+[] a owl:Class ;
+    ns1:IRI "#ExpansionPhase" .
+
+[] a owl:Literal ;
+    ns1:datatypeIRI "http://www.w3.org/2001/XMLSchema#integer" .
+
+[] a owl:ObjectIntersectionOf ;
+    owl:Class [ ns1:IRI "#GameState" ] .
+

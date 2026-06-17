@@ -13,13 +13,28 @@
     <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
     <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
     <Declaration>
+        <Class IRI="#AcceptAid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcceptAlliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AcceptVassalage"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Action"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Attack"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#BreakAlliance"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#BuildTroop"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Collapsed"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Defend"/>
@@ -46,7 +61,25 @@
         <Class IRI="#NPC"/>
     </Declaration>
     <Declaration>
+        <Class IRI="#OfferAlliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#OfferVassalage"/>
+    </Declaration>
+    <Declaration>
         <Class IRI="#Player"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RejectAid"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RejectAlliance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RejectVassalage"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RequestAid"/>
     </Declaration>
     <Declaration>
         <Class IRI="#Resource"/>
@@ -65,6 +98,9 @@
     </Declaration>
     <Declaration>
         <Class IRI="#UnderAttack"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Vassal"/>
     </Declaration>
     <Declaration>
         <ObjectProperty IRI="#hasResource"/>
@@ -79,7 +115,19 @@
         <ObjectProperty IRI="#isAlliedWith"/>
     </Declaration>
     <Declaration>
+        <ObjectProperty IRI="#isVassalOf"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offersAllianceTo"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#offersVassalageTo"/>
+    </Declaration>
+    <Declaration>
         <ObjectProperty IRI="#recommendedAction"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#requestsAidFrom"/>
     </Declaration>
     <Declaration>
         <DataProperty IRI="#healthPoints"/>
@@ -91,27 +139,134 @@
         <DataProperty IRI="#threatLevel"/>
     </Declaration>
     <Declaration>
+        <NamedIndividual IRI="#Action_AcceptAid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_AcceptAlliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_AcceptVassalage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_Attack"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_BreakAlliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_BuildTroop"/>
+    </Declaration>
+    <Declaration>
         <NamedIndividual IRI="#Action_Defend_Castle"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+        <NamedIndividual IRI="#Action_GatherResource"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <NamedIndividual IRI="#Action_OfferAlliance"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
+        <NamedIndividual IRI="#Action_OfferVassalage"/>
     </Declaration>
     <Declaration>
-        <NamedIndividual IRI="#State_Under_Siege"/>
+        <NamedIndividual IRI="#Action_RejectAid"/>
     </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_RejectAlliance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_RejectVassalage"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_RequestAid"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#Action_Retreat"/>
+    </Declaration>
+    <Declaration>
+        <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#ExpansionPhase"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#GameState"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#threatLevel"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">4</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#threatLevel"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">7</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Safe"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#GameState"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#threatLevel"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#maxInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">3</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#UnderAttack"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#GameState"/>
+            <DataSomeValuesFrom>
+                <DataProperty IRI="#threatLevel"/>
+                <DatatypeRestriction>
+                    <Datatype abbreviatedIRI="xsd:integer"/>
+                    <FacetRestriction facet="http://www.w3.org/2001/XMLSchema#minInclusive">
+                        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">8</Literal>
+                    </FacetRestriction>
+                </DatatypeRestriction>
+            </DataSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AcceptAid"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcceptAlliance"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AcceptVassalage"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
     <SubClassOf>
         <Class IRI="#Attack"/>
         <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#BreakAlliance"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#BuildTroop"/>
         <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Collapsed"/>
+        <Class IRI="#GameState"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#Defend"/>
@@ -138,8 +293,32 @@
         <Class IRI="#Entity"/>
     </SubClassOf>
     <SubClassOf>
+        <Class IRI="#OfferAlliance"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#OfferVassalage"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
         <Class IRI="#Player"/>
         <Class IRI="#Entity"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RejectAid"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RejectAlliance"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RejectVassalage"/>
+        <Class IRI="#Action"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RequestAid"/>
+        <Class IRI="#Action"/>
     </SubClassOf>
     <SubClassOf>
         <Class IRI="#ResourceCritical"/>
@@ -161,64 +340,88 @@
         <Class IRI="#UnderAttack"/>
         <Class IRI="#GameState"/>
     </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Vassal"/>
+        <Class IRI="#GameState"/>
+    </SubClassOf>
+    <ClassAssertion>
+        <Class IRI="#AcceptAid"/>
+        <NamedIndividual IRI="#Action_AcceptAid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcceptAlliance"/>
+        <NamedIndividual IRI="#Action_AcceptAlliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AcceptVassalage"/>
+        <NamedIndividual IRI="#Action_AcceptVassalage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Attack"/>
+        <NamedIndividual IRI="#Action_Attack"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BreakAlliance"/>
+        <NamedIndividual IRI="#Action_BreakAlliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BuildTroop"/>
+        <NamedIndividual IRI="#Action_BuildTroop"/>
+    </ClassAssertion>
     <ClassAssertion>
         <Class IRI="#Defend"/>
         <NamedIndividual IRI="#Action_Defend_Castle"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#Gold"/>
-        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
+        <Class IRI="#GatherResource"/>
+        <NamedIndividual IRI="#Action_GatherResource"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#NPC"/>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
+        <Class IRI="#OfferAlliance"/>
+        <NamedIndividual IRI="#Action_OfferAlliance"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#NPC"/>
-        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
+        <Class IRI="#OfferVassalage"/>
+        <NamedIndividual IRI="#Action_OfferVassalage"/>
     </ClassAssertion>
     <ClassAssertion>
-        <Class IRI="#UnderAttack"/>
-        <NamedIndividual IRI="#State_Under_Siege"/>
+        <Class IRI="#RejectAid"/>
+        <NamedIndividual IRI="#Action_RejectAid"/>
     </ClassAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasTarget"/>
-        <NamedIndividual IRI="#Action_Defend_Castle"/>
-        <NamedIndividual IRI="#Kingdom_OrcHorde"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasResource"/>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
-        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#hasState"/>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
-        <NamedIndividual IRI="#State_Under_Siege"/>
-    </ObjectPropertyAssertion>
-    <ObjectPropertyAssertion>
-        <ObjectProperty IRI="#recommendedAction"/>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
-        <NamedIndividual IRI="#Action_Defend_Castle"/>
-    </ObjectPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#resourceAmount"/>
-        <NamedIndividual IRI="#Avalon_Gold_Reserve"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">12</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#healthPoints"/>
-        <NamedIndividual IRI="#Kingdom_Avalon"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
-    </DataPropertyAssertion>
-    <DataPropertyAssertion>
-        <DataProperty IRI="#threatLevel"/>
-        <NamedIndividual IRI="#State_Under_Siege"/>
-        <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#decimal">9</Literal>
-    </DataPropertyAssertion>
+    <ClassAssertion>
+        <Class IRI="#RejectAlliance"/>
+        <NamedIndividual IRI="#Action_RejectAlliance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RejectVassalage"/>
+        <NamedIndividual IRI="#Action_RejectVassalage"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RequestAid"/>
+        <NamedIndividual IRI="#Action_RequestAid"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Retreat"/>
+        <NamedIndividual IRI="#Action_Retreat"/>
+    </ClassAssertion>
+    <FunctionalObjectProperty>
+        <ObjectProperty IRI="#isVassalOf"/>
+    </FunctionalObjectProperty>
     <SymmetricObjectProperty>
         <ObjectProperty IRI="#isAlliedWith"/>
     </SymmetricObjectProperty>
+    <AsymmetricObjectProperty>
+        <ObjectProperty IRI="#isVassalOf"/>
+    </AsymmetricObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#hasTarget"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isAlliedWith"/>
+    </IrreflexiveObjectProperty>
+    <IrreflexiveObjectProperty>
+        <ObjectProperty IRI="#isVassalOf"/>
+    </IrreflexiveObjectProperty>
     <ObjectPropertyDomain>
         <ObjectProperty IRI="#hasResource"/>
         <Class IRI="#Entity"/>
@@ -236,7 +439,23 @@
         <Class IRI="#Entity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyDomain>
+        <ObjectProperty IRI="#isVassalOf"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#offersAllianceTo"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#offersVassalageTo"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
         <ObjectProperty IRI="#recommendedAction"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyDomain>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#requestsAidFrom"/>
         <Class IRI="#Entity"/>
     </ObjectPropertyDomain>
     <ObjectPropertyRange>
@@ -256,8 +475,24 @@
         <Class IRI="#Entity"/>
     </ObjectPropertyRange>
     <ObjectPropertyRange>
+        <ObjectProperty IRI="#isVassalOf"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#offersAllianceTo"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#offersVassalageTo"/>
+        <Class IRI="#Entity"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
         <ObjectProperty IRI="#recommendedAction"/>
         <Class IRI="#Action"/>
+    </ObjectPropertyRange>
+    <ObjectPropertyRange>
+        <ObjectProperty IRI="#requestsAidFrom"/>
+        <Class IRI="#Entity"/>
     </ObjectPropertyRange>
     <DataPropertyDomain>
         <DataProperty IRI="#healthPoints"/>
@@ -283,6 +518,897 @@
         <DataProperty IRI="#threatLevel"/>
         <Datatype abbreviatedIRI="xsd:integer"/>
     </DataPropertyRange>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Genisleme Donemi Stratejisi</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S6</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#ExpansionPhase"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Food"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":amount"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":amount"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_Attack"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Ekonomik Kriz ve Geri Cekilme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S3</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Food"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":amount"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable abbreviatedIRI=":amount"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_Retreat"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Baris Zamani Yatirimi</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S4</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Gold"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":amount"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":amount"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_BuildTroop"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Fakirlik ve Toparlanma</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S5</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Gold"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":amount"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable abbreviatedIRI=":amount"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_GatherResource"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Karsi Saldiri Firsati</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S2</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Troop"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":amount"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":amount"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_Attack"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Savunma Icgudusu</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S1</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e"/>
+                <NamedIndividual IRI="#Action_Defend_Castle"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Vassalin Kaynaklarini Somurme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S14</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isVassalOf"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Gold"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":g"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":g"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_BuildTroop"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Guclulerin Baris Pakti</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S12</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ClassAtom>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ClassAtom>
+            <DifferentIndividualsAtom>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </DifferentIndividualsAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_OfferAlliance"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersAllianceTo"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Cokus Oncesi Boyun Egme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S10</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#healthPoints"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":hp"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable abbreviatedIRI=":hp"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">15</Literal>
+            </BuiltInAtom>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_OfferVassalage"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersVassalageTo"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Ittifak Teklifini Reddetme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S17</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersAllianceTo"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#ExpansionPhase"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_RejectAlliance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Zayif Dusen Muttefike Firsatci Ihanet</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S11</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#ExpansionPhase"/>
+                <Variable abbreviatedIRI=":s1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Troop"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":t"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":t"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">60</Literal>
+            </BuiltInAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isAlliedWith"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s2"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_BreakAlliance"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasTarget"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Bolluk Icinde Yardimi Kabul Etme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S8</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#requestsAidFrom"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Gold"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":g"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":g"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_AcceptAid"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Kendi Caninin Derdine Dusup Yardimi Reddetme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S9</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#requestsAidFrom"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Gold"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":g"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#lessThanOrEqual">
+                <Variable abbreviatedIRI=":g"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">20</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_RejectAid"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Gelen Himaye Teklifini Kabul Etme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S13</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersVassalageTo"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_AcceptVassalage"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Himaye Teklifini Reddetme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S15</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersVassalageTo"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Safe"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#healthPoints"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":hp"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":hp"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">50</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_RejectVassalage"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Ittifak Teklifini Kabul Etme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S16</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#offersAllianceTo"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasResource"/>
+                <Variable abbreviatedIRI=":e2"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#Troop"/>
+                <Variable abbreviatedIRI=":r"/>
+            </ClassAtom>
+            <DataPropertyAtom>
+                <DataProperty IRI="#resourceAmount"/>
+                <Variable abbreviatedIRI=":r"/>
+                <Variable abbreviatedIRI=":t"/>
+            </DataPropertyAtom>
+            <BuiltInAtom IRI="http://www.w3.org/2003/11/swrlb#greaterThanOrEqual">
+                <Variable abbreviatedIRI=":t"/>
+                <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#integer">40</Literal>
+            </BuiltInAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_AcceptAlliance"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
+    <DLSafeRule>
+        <Annotation>
+            <AnnotationProperty IRI="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled"/>
+            <Literal datatypeIRI="http://www.w3.org/2001/XMLSchema#boolean">true</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+            <Literal>Muttefikten Acil Yardim Isteme</Literal>
+        </Annotation>
+        <Annotation>
+            <AnnotationProperty abbreviatedIRI="rdfs:label"/>
+            <Literal>S7</Literal>
+        </Annotation>
+        <Body>
+            <ClassAtom>
+                <Class IRI="#Entity"/>
+                <Variable abbreviatedIRI=":e1"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#hasState"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ObjectPropertyAtom>
+            <ClassAtom>
+                <Class IRI="#UnderAttack"/>
+                <Variable abbreviatedIRI=":s"/>
+            </ClassAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#isAlliedWith"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+        </Body>
+        <Head>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#recommendedAction"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <NamedIndividual IRI="#Action_RequestAid"/>
+            </ObjectPropertyAtom>
+            <ObjectPropertyAtom>
+                <ObjectProperty IRI="#requestsAidFrom"/>
+                <Variable abbreviatedIRI=":e1"/>
+                <Variable abbreviatedIRI=":e2"/>
+            </ObjectPropertyAtom>
+        </Head>
+    </DLSafeRule>
 </Ontology>
 
 

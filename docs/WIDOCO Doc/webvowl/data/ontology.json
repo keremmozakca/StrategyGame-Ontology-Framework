@@ -1,0 +1,877 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "baseIris" : [ "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2", "http://www.w3.org/2000/01/rdf-schema", "http://www.w3.org/2001/XMLSchema" ],
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2"
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "12",
+    "type" : "owl:Class"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "25",
+    "type" : "owl:Class"
+  }, {
+    "id" : "30",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "8",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "32",
+    "type" : "owl:Class"
+  }, {
+    "id" : "16",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "39",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "28",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "9",
+    "type" : "owl:Class"
+  }, {
+    "id" : "22",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "6",
+    "type" : "owl:Class"
+  }, {
+    "id" : "36",
+    "type" : "owl:Class"
+  }, {
+    "id" : "48",
+    "type" : "owl:Class"
+  }, {
+    "id" : "34",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "owl:Class"
+  }, {
+    "id" : "14",
+    "type" : "owl:Class"
+  }, {
+    "id" : "23",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RequestAid",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RequestAid"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RequestAid",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_RequestAid"
+      }
+    } ],
+    "id" : "3",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Action"
+    },
+    "subClasses" : [ "3", "5", "6", "7", "8", "9", "10", "11", "12", "13", "14", "15", "16", "17", "18" ],
+    "id" : "4"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#NPC",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NPC"
+    },
+    "id" : "20",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAid",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcceptAid"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAid",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_AcceptAid"
+      }
+    } ],
+    "id" : "12",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferAlliance",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OfferAlliance"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferAlliance",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_OfferAlliance"
+      }
+    } ],
+    "id" : "13",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Collapsed",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Collapsed"
+    },
+    "id" : "25",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ExpansionPhase",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ExpansionPhase"
+    },
+    "intersection" : [ "23" ],
+    "attributes" : [ "intersection" ],
+    "id" : "30",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Resource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Resource"
+    },
+    "subClasses" : [ "36", "34", "37" ],
+    "id" : "2"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Attack",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attack"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Attack",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_Attack"
+      }
+    } ],
+    "id" : "7",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectVassalage",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RejectVassalage"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectVassalage",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_RejectVassalage"
+      }
+    } ],
+    "id" : "8",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Retreat",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Retreat"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Retreat",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_Retreat"
+      }
+    } ],
+    "id" : "10",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BuildTroop",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BuildTroop"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BuildTroop",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_BuildTroop"
+      }
+    } ],
+    "id" : "11",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#ResourceCritical",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "ResourceCritical"
+    },
+    "id" : "32",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#BreakAlliance",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BreakAlliance"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_BreakAlliance",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_BreakAlliance"
+      }
+    } ],
+    "id" : "16",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptVassalage",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcceptVassalage"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptVassalage",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_AcceptVassalage"
+      }
+    } ],
+    "id" : "15",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GatherResource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GatherResource"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_GatherResource",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_GatherResource"
+      }
+    } ],
+    "id" : "17",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Safe",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Safe"
+    },
+    "intersection" : [ "23" ],
+    "attributes" : [ "intersection" ],
+    "id" : "39",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#UnderAttack",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "UnderAttack"
+    },
+    "intersection" : [ "23" ],
+    "attributes" : [ "intersection" ],
+    "id" : "28",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "46",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Entity",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Entity"
+    },
+    "subClasses" : [ "48", "20" ],
+    "id" : "1"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Defend",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Defend"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_Defend_Castle",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_Defend_Castle"
+      }
+    } ],
+    "id" : "9",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Vassal",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Vassal"
+    },
+    "id" : "22",
+    "superClasses" : [ "23" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "42",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "61",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAid",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RejectAid"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAid",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_RejectAid"
+      }
+    } ],
+    "id" : "5",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#AcceptAlliance",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AcceptAlliance"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_AcceptAlliance",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_AcceptAlliance"
+      }
+    } ],
+    "id" : "6",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Gold",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Gold"
+    },
+    "id" : "36",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Player",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Player"
+    },
+    "id" : "48",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Food",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Food"
+    },
+    "id" : "34",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Troop",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Troop"
+    },
+    "id" : "37",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#OfferVassalage",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "OfferVassalage"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_OfferVassalage",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_OfferVassalage"
+      }
+    } ],
+    "id" : "14",
+    "superClasses" : [ "4" ]
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#GameState",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GameState"
+    },
+    "subClasses" : [ "39", "28", "25", "32", "30", "22" ],
+    "id" : "23"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#RejectAlliance",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RejectAlliance"
+    },
+    "individuals" : [ {
+      "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#Action_RejectAlliance",
+      "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+      "labels" : {
+        "IRI-based" : "Action_RejectAlliance"
+      }
+    } ],
+    "id" : "18",
+    "superClasses" : [ "4" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "24",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "26",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "29",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "31",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "33",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "35",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "38",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "40",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "44",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "45",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "54",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "55",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "56",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "57",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "58",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "60",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "63",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "65",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "67",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "70",
+    "type" : "owl:objectProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasResource",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "2",
+    "label" : {
+      "IRI-based" : "hasResource"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#requestsAidFrom",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "requestsAidFrom"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "19"
+  }, {
+    "range" : "23",
+    "domain" : "22",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "21"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasTarget",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "hasTarget"
+    },
+    "domain" : "4",
+    "attributes" : [ "object", "irreflexive" ],
+    "id" : "24"
+  }, {
+    "range" : "23",
+    "domain" : "25",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "26"
+  }, {
+    "range" : "23",
+    "domain" : "28",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "27"
+  }, {
+    "range" : "23",
+    "domain" : "30",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "29"
+  }, {
+    "range" : "23",
+    "domain" : "32",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "31"
+  }, {
+    "range" : "2",
+    "domain" : "34",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "33"
+  }, {
+    "range" : "2",
+    "domain" : "36",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "35"
+  }, {
+    "range" : "23",
+    "domain" : "39",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "38"
+  }, {
+    "range" : "2",
+    "domain" : "37",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "40"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#healthPoints",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "42",
+    "label" : {
+      "IRI-based" : "healthPoints"
+    },
+    "domain" : "1",
+    "attributes" : [ "datatype" ],
+    "id" : "41"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isAlliedWith",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isAlliedWith"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "symmetric", "irreflexive" ],
+    "id" : "43"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersVassalageTo",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "offersVassalageTo"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#threatLevel",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "46",
+    "label" : {
+      "IRI-based" : "threatLevel"
+    },
+    "domain" : "23",
+    "attributes" : [ "datatype" ],
+    "id" : "45"
+  }, {
+    "range" : "1",
+    "domain" : "48",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "47"
+  }, {
+    "range" : "4",
+    "domain" : "18",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "49"
+  }, {
+    "range" : "1",
+    "domain" : "20",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "50"
+  }, {
+    "range" : "4",
+    "domain" : "15",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "51"
+  }, {
+    "range" : "4",
+    "domain" : "14",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "52"
+  }, {
+    "range" : "4",
+    "domain" : "17",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "53"
+  }, {
+    "range" : "4",
+    "domain" : "16",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "54"
+  }, {
+    "range" : "4",
+    "domain" : "11",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "55"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#offersAllianceTo",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "offersAllianceTo"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "56"
+  }, {
+    "range" : "4",
+    "domain" : "13",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#hasState",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "23",
+    "label" : {
+      "IRI-based" : "hasState"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "58"
+  }, {
+    "range" : "4",
+    "domain" : "12",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "59"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#resourceAmount",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "61",
+    "label" : {
+      "IRI-based" : "resourceAmount"
+    },
+    "domain" : "2",
+    "attributes" : [ "datatype" ],
+    "id" : "60"
+  }, {
+    "range" : "4",
+    "domain" : "3",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "62"
+  }, {
+    "range" : "4",
+    "domain" : "5",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "63"
+  }, {
+    "range" : "4",
+    "domain" : "6",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "64"
+  }, {
+    "range" : "4",
+    "domain" : "7",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "65"
+  }, {
+    "range" : "4",
+    "domain" : "8",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "66"
+  }, {
+    "range" : "4",
+    "domain" : "9",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "67"
+  }, {
+    "range" : "4",
+    "domain" : "10",
+    "attributes" : [ "anonymous", "object" ],
+    "id" : "68"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#isVassalOf",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "1",
+    "label" : {
+      "IRI-based" : "isVassalOf"
+    },
+    "domain" : "1",
+    "attributes" : [ "object", "functional", "irreflexive", "asymmetric" ],
+    "id" : "69"
+  }, {
+    "iri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2#recommendedAction",
+    "baseIri" : "http://www.semanticweb.org/cse3226/strategy-game-ontology/v2",
+    "range" : "4",
+    "label" : {
+      "IRI-based" : "recommendedAction"
+    },
+    "domain" : "1",
+    "attributes" : [ "object" ],
+    "id" : "70"
+  } ]
+}

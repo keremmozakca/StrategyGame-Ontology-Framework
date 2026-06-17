@@ -1,0 +1,1913 @@
+[
+    {
+        "turn": 1,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 100,
+                "gold": 50,
+                "food": 50,
+                "troop": 30,
+                "threatLevel": 2,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 45,
+                "food": 60,
+                "troop": 25,
+                "threatLevel": 3,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 20,
+                "food": 30,
+                "troop": 50,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 60,
+                "food": 40,
+                "troop": 20,
+                "threatLevel": 2,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ]
+    },
+    {
+        "turn": 2,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 100,
+                "gold": 50,
+                "food": 20,
+                "troop": 30,
+                "threatLevel": 1,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 45,
+                "food": 35,
+                "troop": 25,
+                "threatLevel": 2,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 90,
+                "gold": 44,
+                "food": 0,
+                "troop": 30,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 36,
+                "food": 30,
+                "troop": 10,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_OfferAlliance",
+            "Kingdom_Avalon": "Action_OfferAlliance",
+            "Kingdom_OrcHorde": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_OfferAlliance"
+        }
+    },
+    {
+        "turn": 3,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 90,
+                "gold": 50,
+                "food": 0,
+                "troop": 20,
+                "threatLevel": 2,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 45,
+                "food": 15,
+                "troop": 20,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 80,
+                "gold": 44,
+                "food": 0,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 36,
+                "food": 25,
+                "troop": 5,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_OfferAlliance",
+            "Kingdom_Avalon": "Action_OfferAlliance",
+            "Kingdom_OrcHorde": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 4,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 80,
+                "gold": 50,
+                "food": 0,
+                "troop": 0,
+                "threatLevel": 3,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 66,
+                "food": 35,
+                "troop": 20,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 70,
+                "gold": 44,
+                "food": 0,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 36,
+                "food": 15,
+                "troop": 10,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_BuildTroop",
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_OrcHorde": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 5,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 54,
+                "gold": 30,
+                "food": 0,
+                "troop": 0,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 86,
+                "food": 19,
+                "troop": 16,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 70,
+                "gold": 44,
+                "food": 0,
+                "troop": 0,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 50,
+                "food": 24,
+                "troop": 10,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_BuildTroop",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_OrcHorde": "Action_Retreat",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 6,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 27,
+                "food": 30,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 105,
+                "food": 31,
+                "troop": 16,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 70,
+                "gold": 69,
+                "food": 32,
+                "troop": 0,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 67,
+                "food": 16,
+                "troop": 8,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_GatherResource",
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_OrcHorde": "Action_GatherResource",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 7,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 27,
+                "food": 26,
+                "troop": 4,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 105,
+                "food": 23,
+                "troop": 8,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 70,
+                "gold": 69,
+                "food": 32,
+                "troop": 0,
+                "threatLevel": 4,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 78,
+                "food": 25,
+                "troop": 8,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Defend_Castle",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_OrcHorde": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 8,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 27,
+                "food": 17,
+                "troop": 9,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 132,
+                "food": 17,
+                "troop": 6,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 14,
+                "gold": 26,
+                "food": 32,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 94,
+                "food": 19,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Defend_Castle",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_OrcHorde": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 9,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 42,
+                "food": 32,
+                "troop": 9,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 132,
+                "food": 6,
+                "troop": 11,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 14,
+                "gold": 26,
+                "food": 27,
+                "troop": 5,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 110,
+                "food": 45,
+                "troop": 6,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_GatherResource",
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_OrcHorde": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 10,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 52,
+                "food": 25,
+                "troop": 7,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 145,
+                "food": 29,
+                "troop": 11,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 116,
+                "food": 42,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Attack",
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_OrcHorde": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 11,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 52,
+                "food": 22,
+                "troop": 3,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 145,
+                "food": 24,
+                "troop": 5,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 116,
+                "food": 36,
+                "troop": 6,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Attack",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 12,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 52,
+                "food": 16,
+                "troop": 6,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 100,
+                "gold": 145,
+                "food": 22,
+                "troop": 2,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 116,
+                "food": 25,
+                "troop": 11,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Defend_Castle",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 13,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 39,
+                "food": 10,
+                "troop": 6,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 95,
+                "food": 21,
+                "troop": 1,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 179,
+                "food": 17,
+                "troop": 8,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Retreat",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 14,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 32,
+                "gold": 39,
+                "food": 4,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 95,
+                "food": 15,
+                "troop": 6,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 198,
+                "food": 44,
+                "troop": 8,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Retreat",
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 15,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 13,
+                "gold": 37,
+                "food": 39,
+                "troop": 3,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 108,
+                "food": 46,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 222,
+                "food": 38,
+                "troop": 6,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_GatherResource",
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 16,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 108,
+                "food": 43,
+                "troop": 3,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 236,
+                "food": 34,
+                "troop": 4,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Player_Kingdom": "Action_Defend_Castle",
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 17,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 108,
+                "food": 42,
+                "troop": 1,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 236,
+                "food": 26,
+                "troop": 8,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 18,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 108,
+                "food": 36,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 84,
+                "gold": 236,
+                "food": 17,
+                "troop": 9,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 19,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 202,
+                "food": 32,
+                "troop": 4,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 165,
+                "food": 37,
+                "troop": 4,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 20,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 202,
+                "food": 30,
+                "troop": 2,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 165,
+                "food": 29,
+                "troop": 8,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 21,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 72,
+                "gold": 202,
+                "food": 23,
+                "troop": 7,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 165,
+                "food": 20,
+                "troop": 9,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 22,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 57,
+                "gold": 122,
+                "food": 22,
+                "troop": 1,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 245,
+                "food": 15,
+                "troop": 5,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 23,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 57,
+                "gold": 122,
+                "food": 16,
+                "troop": 6,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 245,
+                "food": 5,
+                "troop": 10,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 24,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 57,
+                "gold": 132,
+                "food": 30,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 257,
+                "food": 28,
+                "troop": 10,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 25,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 36,
+                "gold": 80,
+                "food": 29,
+                "troop": 1,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 309,
+                "food": 22,
+                "troop": 6,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 26,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 36,
+                "gold": 80,
+                "food": 23,
+                "troop": 6,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 67,
+                "gold": 309,
+                "food": 11,
+                "troop": 11,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 27,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 36,
+                "gold": 203,
+                "food": 19,
+                "troop": 4,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 46,
+                "gold": 201,
+                "food": 29,
+                "troop": 5,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 28,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 36,
+                "gold": 203,
+                "food": 15,
+                "troop": 4,
+                "threatLevel": 5,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 46,
+                "gold": 201,
+                "food": 19,
+                "troop": 10,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Retreat",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    },
+    {
+        "turn": 29,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 36,
+                "gold": 220,
+                "food": 29,
+                "troop": 4,
+                "threatLevel": 4,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 46,
+                "gold": 211,
+                "food": 32,
+                "troop": 10,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_GatherResource",
+            "Kingdom_ElvenForest": "Action_GatherResource"
+        }
+    },
+    {
+        "turn": 30,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 6,
+                "gold": 132,
+                "food": 28,
+                "troop": 1,
+                "threatLevel": 8,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 46,
+                "gold": 299,
+                "food": 26,
+                "troop": 6,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Attack",
+            "Kingdom_ElvenForest": "Action_Attack"
+        }
+    },
+    {
+        "turn": 31,
+        "entities": [
+            {
+                "id": "Player_Kingdom",
+                "type": "Player",
+                "healthPoints": 0,
+                "gold": 23,
+                "food": 36,
+                "troop": 3,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_Avalon",
+                "type": "NPC",
+                "healthPoints": 6,
+                "gold": 132,
+                "food": 22,
+                "troop": 6,
+                "threatLevel": 6,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            },
+            {
+                "id": "Kingdom_OrcHorde",
+                "type": "NPC",
+                "healthPoints": 0,
+                "gold": 10,
+                "food": 27,
+                "troop": 0,
+                "threatLevel": 9,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": true
+            },
+            {
+                "id": "Kingdom_ElvenForest",
+                "type": "NPC",
+                "healthPoints": 46,
+                "gold": 299,
+                "food": 15,
+                "troop": 11,
+                "threatLevel": 7,
+                "allies": [],
+                "vassalOf": "",
+                "target": "",
+                "isEliminated": false
+            }
+        ],
+        "sparql_decisions": {
+            "Kingdom_Avalon": "Action_Defend_Castle",
+            "Kingdom_ElvenForest": "Action_Defend_Castle"
+        }
+    }
+]
