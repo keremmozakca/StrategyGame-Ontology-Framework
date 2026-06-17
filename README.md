@@ -8,7 +8,7 @@ The overarching goal of this project is to establish an automated semantic workf
 * **Knowledge Representation:** Modeling complex strategic environments (Kingdoms, Resources, Crises) using a strict OWL TBox schema.
 * **Data Integrity:** Validating dynamic game states and ensuring mathematically sound data (e.g., non-negative health points) using **SHACL**.
 * **Semantic Reasoning:** Generating tactical action codes (e.g., *Attack*, *Retreat*, *Offer Vassalage*) via **SPARQL UPDATE** rules, dynamically instantiating turn-based Knowledge Graphs (A-Box).
-* **Explainable AI Storytelling:** Bridging formal deterministic logic and generative AI by feeding validated semantic state changes to the **Gemini 1.5 Flash LLM** via an interactive web dashboard.
+* **Explainable AI Storytelling:** Bridging formal deterministic logic and generative AI by feeding validated semantic state changes to the **Gemini 2.5 Flash LLM** via an interactive web dashboard.
 
 ## 🛠 Technologies and Standards
 * **Ontology Language:** OWL / RDF / Turtle (`.ttl`)
